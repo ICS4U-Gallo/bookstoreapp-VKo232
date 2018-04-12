@@ -2,6 +2,7 @@ package controllers;
 
 import play.mvc.*;
 
+import views.html.home.*;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -19,7 +20,8 @@ public class HomeController extends Controller {
     }
 
     public Result welcome(String name, String lastName) {
-        return ok("welcome " + name + " " + lastName);
+        
+        return ok(welcome.render(name, lastName));
     }
 
 }
