@@ -2,7 +2,8 @@ package controllers;
 
 import play.mvc.*;
 
-import views.html.home.*;
+import views.html.index;
+import views.html.Home.*;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
