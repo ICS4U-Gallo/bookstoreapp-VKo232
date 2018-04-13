@@ -13,6 +13,7 @@ GET /welcome/:name/:lastName                          controllers.HomeController
 
 
 GET /books                                            controllers.BooksController.index
+GET /books/create                                     controllers.BooksController.create()
 GET /books/:id                                        controllers.BooksController.show(id:Integer)
 GET /books/edit/:id                                   controllers.BooksController.edit(id:Integer)
 POST /books/edit                                      controllers.BooksController.update()
