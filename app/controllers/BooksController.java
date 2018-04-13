@@ -5,8 +5,7 @@ import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.books.create;
-import views.html.books.index;
+import views.html.books.*;
 
 import javax.inject.Inject;
 import java.util.Set;
@@ -66,7 +65,13 @@ public class BooksController extends Controller {
     }
 
     public Result show(Integer id) {
-        return TODO;
+        Book book = Book.findById(id);
+        if(book == null) {
+            return notFound("Book not found");
+        }
+
+
+        return ok(show.render(book));
     }
 
 }
