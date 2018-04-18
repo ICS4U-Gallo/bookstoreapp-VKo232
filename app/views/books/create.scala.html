@@ -8,7 +8,7 @@
     <body>
 
         <hl>Create Book</hl>
-        @helper.form(action = routes.BooksController.save()) {
+        @helper.form(CSRF(routes.BooksController.save())) {
             @helper.inputText(bookFrom("id"))
             @helper.inputText(bookFrom("title"))
             @helper.inputText(bookFrom("price"))

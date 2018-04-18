@@ -8,7 +8,7 @@
     <body>
 
         <hl>Edit Book</hl>
-        @helper.form(action = routes.BooksController.update()) {
+        @helper.form(CSRF(routes.BooksController.update())) {
             @helper.inputText(bookFrom("id"))
             @helper.inputText(bookFrom("title"))
             @helper.inputText(bookFrom("price"))
