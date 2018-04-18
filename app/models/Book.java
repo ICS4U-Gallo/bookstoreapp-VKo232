@@ -72,12 +72,12 @@ public class Book {
         this.author = author;
     }
 
-    public Integer getPrice() {
+    public int getPrice() {
         return price;
 
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }
